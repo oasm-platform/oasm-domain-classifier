@@ -17,6 +17,9 @@ setup(
         "torch>=1.9.0",
         "transformers>=4.11.0",
         "huggingface-hub>=0.0.19",
+        "requests>=2.25.1",
+        "beautifulsoup4>=4.9.3",
+        "lxml>=4.6.3",
     ],
     entry_points={
         "console_scripts": [
