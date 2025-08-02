@@ -29,7 +29,7 @@ A Python package for classifying web content into different domains using NVIDIA
 ### Basic Usage
 
 ```python
-from oasm_domain_classifier import DomainClassifier
+from domain_classifier import DomainClassifier
 
 # Initialize the classifier
 classifier = DomainClassifier()
@@ -43,8 +43,8 @@ print(f"Confidence: {result['confidence']:.2%}")
 ### Classify Web Content
 
 ```python
-from oasm_domain_classifier import DomainClassifier
-from oasm_domain_classifier.crawler import CrawlWeb
+from domain_classifier import DomainClassifier
+from crawl_web import CrawlWeb
 
 # Initialize components
 classifier = DomainClassifier()
