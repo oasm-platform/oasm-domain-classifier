@@ -15,14 +15,11 @@ setup(
     packages=find_packages(),
     install_requires=[
         "torch>=1.9.0",
-        "transformers>=4.11.0",
-        "huggingface-hub>=0.0.19",
-        "requests>=2.25.1",
-        "beautifulsoup4>=4.9.3",
-        "lxml>=4.6.3",
-        'protobuf>=3.20.1',
-        'tiktoken>=0.1.0',
-        'sentencepiece>=0.1.96',
+        "transformers>=4.20.0",
+        "huggingface-hub>=0.10.0",
+        "requests>=2.25.0",
+        "beautifulsoup4>=4.9.0",
+        "urllib3>=1.26.0",
     ],
     entry_points={
         "console_scripts": [
