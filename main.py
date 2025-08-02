@@ -1,31 +1,15 @@
-#!/usr/bin/env python3
-"""
-Domain Classifier - A tool for classifying text domains using pre-trained models.
-"""
-import argparse
-import torch
-from classifier import DomainClassifier
+from crawl_web import CrawlWeb
 
-def main():
-    url = "24h.com.vn"
-    
-    try:
-        print("Loading model components...")
-        classifier = DomainClassifier(
-            model_name="nvidia/domain-classifier",
-            use_cache=True
-        )
-    except Exception as e:
-        print(f"Error loading model: {e}")
-        return
-    
-    result = classifier.predict_domain_from_url(url)
-    print(f"\nPredicted domain category: {result}")
-
-        
+def main(url: str):
+    crawler = CrawlWeb()
+    result = crawler.crawl(url)
+    if result:
+        print("Successfully crawled content:")
+        print(result)
+    else:
+        print("Failed to crawl the page.")
+    return result
 
 if __name__ == "__main__":
-    # Enable optimizations
-    torch.backends.cudnn.benchmark = True if torch.cuda.is_available() else False
-    torch.set_num_threads(4)  # Optimize CPU usage
-    main()
+    url = "https://www.24h.com.vn"
+    main(url)

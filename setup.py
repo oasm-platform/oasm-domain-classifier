@@ -20,6 +20,9 @@ setup(
         "requests>=2.25.1",
         "beautifulsoup4>=4.9.3",
         "lxml>=4.6.3",
+        'protobuf>=3.20.1',
+        'tiktoken>=0.1.0',
+        'sentencepiece>=0.1.96',
     ],
     entry_points={
         "console_scripts": [

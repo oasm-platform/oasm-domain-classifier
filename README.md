@@ -4,6 +4,7 @@ A Python-based tool for classifying website domains by analyzing their content u
 
 ## Features
 
+- Crawl website content
 - Classify website domains based on their content
 - Simple command-line interface
 - Supports direct URL input
@@ -23,50 +24,6 @@ A Python-based tool for classifying website domains by analyzing their content u
    ```bash
    pip install -e .
    ```
-
-## Usage
-
-### Basic Usage
-
-Classify a website domain:
-
-```bash
-python main.py
-```
-
-This will classify the default URL (24h.com.vn). To classify a different website, modify the `url` variable in `main.py`.
-
-### Example Output
-
-```
-Loading model components...
-Model loaded successfully! Using device: CPU
-
-Fetching content from: 24h.com.vn
-Classifying content...
-
-Predicted domain category: Business_and_Industrial
-```
-
-## Project Structure
-
-```
-oasm-domain-classifier/
-├── classifier.py    # Domain classifier implementation
-├── model.py         # Custom model implementation
-├── main.py          # Main script
-├── setup.py         # Setup script
-├── requirements.txt # Python dependencies
-└── README.md        # This file
-```
-
-## Requirements
-
-- Python 3.7+
-- PyTorch
-- Transformers
-- BeautifulSoup4
-- Requests
 
 ## License
 
