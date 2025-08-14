@@ -4,7 +4,7 @@ from transformers import AutoModel
 from huggingface_hub import PyTorchModelHubMixin
 
 
-class Model(nn.Module, PyTorchModelHubMixin):
+class ModelMldc(nn.Module, PyTorchModelHubMixin):
     """
     Custom model class required for NVIDIA's multilingual domain classifier
     
@@ -19,7 +19,7 @@ class Model(nn.Module, PyTorchModelHubMixin):
         Args:
             config: Model configuration containing base_model, fc_dropout, and id2label
         """
-        super(Model, self).__init__()
+        super(ModelMldc, self).__init__()
         
         # Load the base transformer model
         self.model = AutoModel.from_pretrained(config["base_model"])

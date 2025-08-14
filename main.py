@@ -1,6 +1,6 @@
-from crawl_web import CrawlWeb
+from tools.crawl_web import CrawlWeb
 import json
-from domain_classifier import DomainClassifier
+from services.domain_classifier import DomainClassifier
 
 
 def main():

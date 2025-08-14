@@ -1,6 +1,6 @@
 import torch
 from transformers import AutoTokenizer, AutoConfig
-from model import Model
+from models.model_mldc import ModelMldc
 
 class DomainClassifier:
     def __init__(self, model_name="nvidia/multilingual-domain-classifier"):
@@ -8,7 +8,7 @@ class DomainClassifier:
         self.model_name = model_name
         self.config = AutoConfig.from_pretrained(self.model_name)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-        self.model = Model.from_pretrained(self.model_name)
+        self.model = ModelMldc.from_pretrained(self.model_name)
         self.model.to(self.device)
         self.model.eval()
 
